@@ -1,0 +1,6 @@
+{
+    "api_key": "SET-ME",
+    "organization_id": "SET-ME",
+    "data_prompt": "Attached is a file containing additional course material. Inform the student that you have received updated course materials. In a second sentence, provide a brief summary of the contents of the updated course materials and inform the user you are ready to answer additional questions about it.",
+    "assistant_id":  "SET-ME"
+}

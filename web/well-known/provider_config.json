@@ -1,0 +1,37 @@
+{
+  "title": "Interactive Chatbot LTI",
+  "scopes": [
+    "https://purl.imsglobal.org/spec/lti-ags/scope/lineitem",
+    "https://purl.imsglobal.org/spec/lti-ags/scope/result.readonly",
+    "https://purl.imsglobal.org/spec/lti-ags/scope/score"
+  ],
+  "extensions": [
+    {
+      "tool_id": "chatbot-lti-web",
+      "platform": "canvas-web.inseng.test",
+      "domain": "chatbot-lti-web.inseng.test",
+      "privacy_level": "public",
+      "settings": {
+        "platform": "canvas-web.inseng.test",
+        "text": "Interactive Chatbot",
+        "url": "http://chatbot-lti-web.inseng.test/launch",
+        "icon_url": "http://chatbot-lti-web.inseng.test/static/icon.svg",
+        "placements": [
+          {
+            "url": "http://chatbot-lti-web.inseng.test/launch",
+            "placement": "wiki_page_menu",
+            "text": "Interactive Chatbot",
+            "message_type": "LtiResourceLinkRequest",
+            "launch_method": "tray",
+            "target_link_uri": "http://chatbot-lti-web.inseng.test/launch",
+            "icon_url": "http://chatbot-lti-web.inseng.test/static/icon.svg"
+          }
+        ]
+      }
+    }
+  ],
+  "description": "An LTI tool for discussing course content with ChatGPT",
+  "public_jwk_url": "http://chatbot-lti-web.inseng.test/.well-known/jwks.json",
+  "target_link_uri": "http://chatbot-lti-web.inseng.test/launch",
+  "oidc_initiation_url": "http://chatbot-lti-web.inseng.test/login"
+}

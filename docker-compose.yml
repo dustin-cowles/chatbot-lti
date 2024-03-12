@@ -1,0 +1,38 @@
+version: '3.0'
+
+services:
+  web:
+    build: ./web
+    ports:
+      - 80
+    environment:
+      - REDIS_HOST=redis
+    volumes:
+      - ./web:/app/
+    command: uvicorn main:asgi_app --host 0.0.0.0 --port 80 --reload
+    networks:
+      default:
+        aliases:
+          - chatbot-lti-web.inseng.test
+          - chatbot-lti-web
+      private-backend: {}
+    depends_on:
+      - redis
+    labels:
+        - "traefik.enable=true"
+
+  redis:
+    image: redis:alpine
+    ports:
+      - 6379
+    restart: always
+    networks:
+      private-backend:
+        aliases:
+          - redis
+
+networks:
+  default:
+    external: true
+    name: "inst_shared"
+  private-backend: {}

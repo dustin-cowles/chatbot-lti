@@ -1,0 +1,6 @@
+-r ./web/requirements.txt
+
+# development
+-e ./web/
+pep8
+autopep8

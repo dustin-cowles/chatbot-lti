@@ -1,0 +1,13 @@
+# application files
+*.pem
+jwks.json
+openai_config.json
+
+# python
+__pycache__/
+.venv/
+*.egg-info/
+
+# misc
+.DS_Store
+*.code-workspace
